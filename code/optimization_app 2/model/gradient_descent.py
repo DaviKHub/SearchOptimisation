@@ -8,6 +8,10 @@ class GradientDescent(BaseOptimizer):
             grad = self.grad_func(x0, y0)
             x0 -= self.step_size * grad[0]
             y0 -= self.step_size * grad[1]
+            z = self.func(x0, y0)
+            print(f"{_}: ({x0:.4f}, {y0:.4f}, {z:.4f})")
+            path.append((x0, y0, z))
+
             path.append((x0, y0, self.func(x0, y0)))
         return np.array(path)
 

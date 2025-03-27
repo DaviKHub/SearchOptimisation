@@ -13,7 +13,7 @@ from model.quadratic_task import quadratic_function
 class OptimizationApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Optimization Visualization")
+        self.root.title("Оптимизация")
 
         self.controller = OptimizerController()
 
@@ -85,7 +85,7 @@ class OptimizationApp:
         Z = Z_func(X, Y)
 
         self.ax.plot_surface(X, Y, Z, cmap="coolwarm", alpha=0.7)
-        self.ax.set_title("Optimization Surface")
+        self.ax.set_title("")
 
         path = self.all_points
         (scat,) = self.ax.plot([], [], [], "ko", markersize=5)
