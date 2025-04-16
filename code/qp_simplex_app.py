@@ -82,7 +82,7 @@ def constrained_nelder_mead(func, x0, y0, step_size=0.1, max_iter=100, tol=1e-6)
 class QPSimplexApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Quadratic Programming (Simplex Method)")
+        self.root.title("Оптимизация")
 
         main_frame = tk.Frame(root)
         main_frame.pack(fill=tk.BOTH, expand=True)
@@ -130,7 +130,7 @@ class QPSimplexApp:
         X, Y = np.meshgrid(x_vals, y_vals)
         Z = quadratic_func(X, Y)
         self.ax.plot_surface(X, Y, Z, cmap="coolwarm", alpha=0.7)
-        self.ax.set_title("Quadratic Programming with Constraints")
+        self.ax.set_title("Оптимизация")
 
         (scat,) = self.ax.plot([], [], [], "ko", markersize=5)
         (red_dot,) = self.ax.plot([], [], [], "ro", markersize=8)
